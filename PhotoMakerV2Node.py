@@ -88,12 +88,10 @@ class BaseModelLoader_local_Node_Zho:
 
         if not os.path.exists(ckpt_path):
             raise FileNotFoundError(f"Checkpoint file {ckpt_path} not found.")
-
         pipe = PhotoMakerStableDiffusionXLPipeline.from_single_file(
             pretrained_model_link_or_path=ckpt_path,
             torch_dtype=torch.float16,
             use_safetensors=True,
-            pm_version='v2',
             variant="fp16"
         ).to(device)
         return [pipe]
@@ -114,6 +112,7 @@ class PhotoMakerAdapterLoader_fromhub_Node_Zho:
         }
 
     RETURN_TYPES = ("MODEL",)
+    RETURN_NAMES = ("pipe",)
     FUNCTION = "load_photomaker_adapter"
     CATEGORY = "📷PhotoMakerV2"
 
@@ -130,7 +129,8 @@ class PhotoMakerAdapterLoader_fromhub_Node_Zho:
             os.path.dirname(photomaker_path),
             subfolder="",
             weight_name=os.path.basename(photomaker_path),
-            trigger_word="img"
+            trigger_word="img",
+            pm_version='v2'
         )
         pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config)
 
@@ -151,6 +151,7 @@ class PhotoMakerAdapterLoader_local_Node_Zho:
         }
 
     RETURN_TYPES = ("MODEL",)
+    RETURN_NAMES = ("pipe",)
     FUNCTION = "load_photomaker_adapter"
     CATEGORY = "📷PhotoMakerV2"
 
@@ -165,7 +166,8 @@ class PhotoMakerAdapterLoader_local_Node_Zho:
             os.path.dirname(photomaker_path),
             subfolder="",
             weight_name=os.path.basename(photomaker_path),
-            trigger_word="img"
+            trigger_word="img",
+            pm_version='v2'
         )
         pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config)
 
