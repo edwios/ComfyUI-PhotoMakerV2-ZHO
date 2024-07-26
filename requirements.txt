@@ -1,9 +1,8 @@
-diffusers==0.25.0
-transformers==4.36.2
-huggingface-hub==0.20.2
+diffusers==0.29.2
+huggingface-hub==0.23.3
 spaces==0.19.4
 numpy
 accelerate
-safetensors
 omegaconf
 peft
+insightface==0.7.3

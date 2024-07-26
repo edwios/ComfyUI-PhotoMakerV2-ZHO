@@ -5,7 +5,16 @@
 
 # ComfyUI PhotoMaker
 
-Unofficial implementation of [PhotoMaker](https://github.com/TencentARC/PhotoMaker) for ComfyUI
+Unofficial implementation of [PhotoMakerV2](https://github.com/TencentARC/PhotoMaker) for ComfyUI
+
+Adapted from [ComfyUI PhotoMaker ZHO](https://github.com/ZHO-ZHO-ZHO/ComfyUI-PhotoMaker) and converted to PhotoMakerV2.
+
+Original README follows
+
+-----
+
+Unofficial implementation of [PhotoMakerV2](https://github.com/TencentARC/PhotoMaker) for ComfyUI
+
 
 <!---
 ![Dingtalk_20240117150313](https://github.com/ZHO-ZHO-ZHO/ComfyUI-PhotoMaker/assets/140084057/da664c2b-cb30-44e2-85ec-d6070fcfa8f0)
