@@ -9,6 +9,8 @@ Unofficial implementation of [PhotoMakerV2](https://github.com/TencentARC/PhotoM
 
 Adapted from [ComfyUI PhotoMaker ZHO](https://github.com/ZHO-ZHO-ZHO/ComfyUI-PhotoMaker) and converted to PhotoMakerV2.
 
+Also added proper support to Apple Silicon.
+
 Original README follows
 
 -----
